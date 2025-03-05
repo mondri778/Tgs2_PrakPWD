@@ -160,6 +160,49 @@
         </body>
         </html>
 
+            <div class="tab-pane fade" id="segitiga">
+                <h3 class="text-primary">Luas Segitiga</h3>
+                </head>
+<body>
+    <h1>Luas Segitiga</h1>
+    <input type="number" id="angka1" placeholder="Angka 1">
+    <input type="number" id="angka2" placeholder="Angka 2">
+    <select id="operasi">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value=""></option>
+        <option value="/">/</option>
+    </select>
+    <button onclick="hitung()">Hitung</button>
+    <p id="hasilKalkulator"></p>
+
+    <script>
+        function hitung() {
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            const operasi = document.getElementById('operasi').value;
+            let hasil;
+
+            switch (operasi) {
+                case '+': hasil = angka1 + angka2; break;
+                case '-': hasil = angka1 - angka2; break;
+                case '*': hasil = angka1 * angka2; break;
+                case '/': 
+                    if (angka2 !== 0) {
+                        hasil = angka1 / angka2; 
+                    } else {
+                        hasil = 'Tidak bisa dibagi dengan nol!';
+                    }
+                    break;
+                default: hasil = 'Operasi tidak valid!'; break;
+            }
+
+            document.getElementById('hasilKalkulator').innerText = hasil;
+        }
+    </script>
+</body>
+</html>
+
         <div class="tab-pane fade" id="kubus">
             <h3 class="text-primary">Kubus</h3>
             <form>
