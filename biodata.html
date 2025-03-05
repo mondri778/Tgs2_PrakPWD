@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Biodata</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .nav-link {
+            color: #000dff !important;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            border: 1px solid #dee2e6;
+        }
+
+        label {
+            color: rgb(65, 62, 65);
+        }
+
+        .centered {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 70vh;
+        }
+
+.card {
+    width: 50%;
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<div class="container">
+    <a class="navbar-brand" href="#">Nico Bieber</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#bulan">Bulan</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#segitiga">Segitiga</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#kubus">Kubus</a>
+            </li>
+        </ul>
+    </div>
+</div>
+</nav>
+
+<div class="container mt-4">
+<div class="tab-content">
+    <div class="tab-pane fade show active" id="home">
+        <div class="centered">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 class="text-primary text-center">curriculum vitae</h3>
+                    <form>
+                        <div class="mb-3 text-center">
+                            <label class="form-label">Profil:</label><br> 
+                            <img src="saya.jpg" alt="Foto NICO" class="img-thumbnail" width="150">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Nama:</label>
+                            <input type="text" class="form-control" value="Nico Mavy" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Tempat Tanggal Lahir:</label>
+                            <input type="text" class="form-control" value="Limburg,15-02-2006" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Alamat:</label>
+                            <input type="text" class="form-control" value="Lampung" readonly>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="contact">
+        <h3 class="text-primary">Informasi Formulir</h3>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Email:</label>
+                <input type="email" class="form-control" value="tokyovibes@gmail.com" readonly>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Jenis Kelamin:</label><br>
+                <input type="radio" name="gender" checked> Laki-laki
+                <input type="radio" name="gender"> Perempuan
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Hobi:</label><br>
+                <input type="checkbox" checked> Basket
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Kesan & Pesan:</label>
+                <textarea class="form-control" readonly>Jika Kau Lapar Maka Makanlah!</textarea>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+        <div class="tab-pane fade" id="bulan">
+            <h3 class="text-primary">Bulan</h3>
+        </head>
+        <body>
+            <h1>Cetak Bulan</h1>
+            <label for="bulanInput">Masukkan angka (1-12): </label>
+            <input type="number" id="bulanInput" min="1" max="12">
+            <button onclick="cetakBulan()">Cetak Bulan</button>
+            <p id="hasilBulan"></p>
+        
+            <script>
+                function cetakBulan() {
+                    const bulan = document.getElementById('bulanInput').value;
+                    let namaBulan;
+        
+                    switch (bulan) {
+                        case '1': namaBulan = 'Januari'; break;
+                        case '2': namaBulan = 'Februari'; break;
+                        case '3': namaBulan = 'Maret'; break;
+                        case '4': namaBulan = 'April'; break;
+                        case '5': namaBulan = 'Mei'; break;
+                        case '6': namaBulan = 'Juni'; break;
+                        case '7': namaBulan = 'Juli'; break;
+                        case '8': namaBulan = 'Agustus'; break;
+                        case '9': namaBulan = 'September'; break;
+                        case '10': namaBulan = 'Oktober'; break;
+                        case '11': namaBulan = 'November'; break;
+                        case '12': namaBulan = 'Desember'; break;
+                        default: namaBulan = 'Input tidak valid!'; break;
+                    }
+                    document.getElementById('hasilBulan').innerText = namaBulan;
+                }
+            </script>
+        </body>
+        </html>
+
+        <div class="tab-pane fade" id="kubus">
+            <h3 class="text-primary">Kubus</h3>
+            <form>
+                <div class="mb-3">
+                    <label class="form-label">Sisi:</label>
+                    <input type="number" id="sisi" class="form-control">
+                </div>
+                <button type="button" class="btn btn-primary" onclick="hitungKubus()">Hitung</button>
+                <p class="mt-2">Volume: <span id="hasilKubus"></span></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+    function hitungSegitiga() {
+        let alas = document.getElementById('alas').value;
+        let tinggi = document.getElementById('tinggi').value;
+        let luas = 0.5 * alas * tinggi;
+        document.getElementById('hasilSegitiga').textContent = luas;
+    }
+    function hitungKubus() {
+            let sisi = document.getElementById('sisi').value;
+            let volume = sisi * sisi * sisi;
+            document.getElementById('hasilKubus').textContent = volume;
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
